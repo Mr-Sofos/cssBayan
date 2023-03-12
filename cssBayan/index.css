@@ -1,0 +1,133 @@
+body {
+    background-color: #687466;
+    overflow-y: scroll;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+body::-webkit-scrollbar {
+    width: 20px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #687466;
+    border-radius: 20px;
+    border: 2px solid #fff;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+.meme-wrapper {
+    padding: 3em;
+    border: 2px solid #fff;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+.meme-wrapper:hover label::after {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.memes-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.meme {
+    width: 100%;
+    color: #fff;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.meme input {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.meme label {
+    display: block;
+    cursor: pointer;
+    height: 2.5em;
+    border-bottom: 2px solid #ffffff;
+    line-height: 2.5em;
+    padding: 0 1em;
+    font-weight: 700;
+    font-size: 1em;
+    transition: 0.5s;
+    background-color: #5c695a;
+}
+
+.meme-content {
+    max-height: 0;
+    overflow: hidden;
+    margin-bottom: 1.5em;
+    transition: 0.5s;
+}
+
+.meme input:checked~.meme-content {
+    max-height: 30em;
+    transition: 0.5s;
+}
+
+.meme label::after {
+    display: block;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transition: 0.5s;
+    margin-left: 96%;
+    opacity: 0;
+}
+
+.meme input:hover~.meme-content {
+    max-height: 30em;
+    transition: 1s;
+}
+
+.meme input[type="checkbox"]+label::after {
+    content: '';
+    background-image: url(img/plus.png);
+    width: 1.5em;
+    height: 1.5em;
+    position: static;
+    background-size: cover;
+    margin-top: -2em;
+}
+
+.meme input[type="checkbox"]:checked+label::after {
+    content: '';
+    background-image: url(img/plus.png);
+    width: 30px;
+    height: 30px;
+    position: static;
+    background-size: cover;
+    transform: rotate(45deg);
+}
+
+.meme-div {
+    margin: 0 auto;
+}
+
+.meme-img {
+    margin-top: 1.5em;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
