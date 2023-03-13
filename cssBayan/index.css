@@ -6,7 +6,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-    width: 20px;
+    width: 1.2em;
 }
 
 body::-webkit-scrollbar-track {
@@ -15,7 +15,7 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
     background-color: #687466;
-    border-radius: 20px;
+    border-radius: 1.2em;
     border: 2px solid #fff;
 }
 
@@ -87,25 +87,24 @@ h1 {
 
 .meme label::after {
     display: block;
-    width: 1em;
-    height: 1em;
+    width: 1.5em;
+    height: 1.5em;
     text-align: center;
     transition: 0.5s;
     margin-left: 96%;
     opacity: 0;
 }
 
-.meme input:hover~.meme-content {
-    max-height: 30em;
-    transition: 1s;
-}
+/*.meme input:hover~.meme-content {*/
+/*    max-height: 30em;*/
+/*    transition: 1s;*/
+/*}*/
 
 .meme input[type="checkbox"]+label::after {
     content: '';
     background-image: url(img/plus.png);
     width: 1.5em;
     height: 1.5em;
-    position: static;
     background-size: cover;
     margin-top: -2em;
 }
@@ -113,11 +112,10 @@ h1 {
 .meme input[type="checkbox"]:checked+label::after {
     content: '';
     background-image: url(img/plus.png);
-    width: 30px;
-    height: 30px;
-    position: static;
+    width: 1.5em;
+    height: 1.5em;
     background-size: cover;
-    transform: rotate(45deg);
+    rotate: 45deg;
 }
 
 .meme-div {
@@ -159,8 +157,8 @@ h1 {
         width: 80%;
     }
 
-    .meme input:not(.meme-content):hover~.meme-content {
-        max-height: 0;
-        transition: 0.5s;
-    }
+    /*.meme input:not(.meme-content):hover~.meme-content {*/
+    /*    max-height: 0;*/
+    /*    transition: 0.5s;*/
+    /*}*/
 }
